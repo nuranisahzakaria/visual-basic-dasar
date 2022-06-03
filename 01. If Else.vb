@@ -95,6 +95,5 @@ Sub Cek_Nilai()
         Range("C4") = mutu
         
     End If
-          
-        
+
 End Sub
