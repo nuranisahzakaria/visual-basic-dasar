@@ -37,7 +37,7 @@ End Sub
 ' 1. Kenapa pas di cell C8 ngga mau bener perhitungannya, tapi kalo diubah ke D8 atau K8
 ' langsung work
 ' 2. Cari tau berapa batasan integer di VBA (kalo di python kan ga dibatasi, krn int sudah 
-' cukup untuk digunakan dan tidak perlu pake long), kalo VBA gimana? belum tau
+' cukup untuk digunakan dan tidak perlu pake long), kalo VBA gimana? belum tau => 4 DIGIT RUPANYA
 ' 3. Aku harus latih logika pemograman deh, kurang banget ini. Masak ngga kepikiran buat 
 ' begini sih kemaren. Kalo belajar, insya Allah bisa kok.
 ' 4. Coba selesaikan soalnya pake cara dan jalan logika lain nis, atau setidaknya coba 
