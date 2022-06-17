@@ -25,5 +25,5 @@ End Sub
 
 
 ' Perbedaan dari koding sebelumnya yang punya kawan
-' 1. Lebih sederhana dan dingkat karena tidak menggunakan fungsi if untuk elemen yang tidak perlu
+' 1. Lebih sederhana dan singkat karena tidak menggunakan fungsi if untuk elemen yang tidak perlu
 ' 2. Diskon dihitung dari jumlah seluruh harga

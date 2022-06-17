@@ -1,0 +1,69 @@
+Array (larik)
+	=> Suatu tipe data yg dapat menyimpan banyak data dg seuatu nama yang sama dan menempati tepat dimemori yang 
+	berurutan serta bertipe data yang sama
+	contoh :
+	bulan (12)
+
+	Larik dpt diakses berdasarkan indexnya. Index larik umumnya dimulai dari 0, dan ada pula yang dimulai dari 
+	angka bukan 0. Pengaksesan array biasanya dibuat dengan menggunakan perulangan (looping).
+	contoh :
+	for i = 0 to 11
+		if bulan(i) = 3 Then
+			msgbox("Maret")
+			Exit for   => untuk menutup perintah for agar tidak diulangi lagi, kalo tdk ditutup akan terus diulang sampai 11
+		Endif
+	End For
+		bulan(12)
+
+
+
+
+	=> for perulangan yang tidak akan berhenti sampai dicapai nilai
+
+	coding 
+	Sub larik()
+    Dim bulan(12) As Integer
+    
+    bulan(0) = 1
+    bulan(1) = 2
+    bulan(2) = 3
+    bulan(3) = 4
+    bulan(4) = 5
+    bulan(5) = 6
+    bulan(6) = 7
+    bulan(7) = 8
+    bulan(8) = 9
+    bulan(9) = 10
+    bulan(10) = 11
+    bulan(11) = 12
+
+    For i = 0 To 11
+        If bulan(i) = 3 Then
+            MsgBox ("Maret")
+            Exit For
+        End If
+    Next i
+    
+    For j = 0 To 11
+        If bulan(j) = 4 Then
+            MsgBox ("April")
+            Exit For
+        End If
+    Next j
+End Sub
+
+
+=IF([@NIM]="";"";ROW()-1) => jika disebelah tidak kosong, isi nilai 1 dst. Jika kosong, maka isikan nilai
+row() => mengambil baris
+
+    Dim database As Worksheet
+        database = ThisWorkbook.Worksheets(2)
+        
+        database.cell(2, 2) = ThisWorkbook.Worksheets(1).cell(1, 3)
+        database.cell(2, 3) = ThisWorkbook.Worksheets(1).cell(2, 3)
+        database.cell(2, 4) = ThisWorkbook.Worksheets(1).cell(3, 3)
+
+    Dim nim as Range 
+        nim = Range("c1")
+
+Agar data dimasukkan bertambah, harus pake looping, dg menggunakan variabel baris dan variabel kolom
