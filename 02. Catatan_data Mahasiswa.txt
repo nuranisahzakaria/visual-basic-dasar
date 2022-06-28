@@ -1,0 +1,41 @@
+> Kolom tidak boleh kosong dan harus mengandung 9 karakter
+> Contoh Kodingan 1
+if B2 = "" AND B2 <> 9 Then
+
+End if
+
+> Contoh Kodingan 2
+If Range("B2") = "" Then
+        MsgBox ("Isi NIM terlebih dahulu")
+End If
+
+Application.SendKeys "{F2}" => untuk melanjutkan pengeditan di kolom tersebut
+
+------------------------------------------KODING-------------------------------------------------
+Sub Button5_CEK()
+    If Range("B2") = "" Then
+        MsgBox ("Isi NIM terlebih dahulu")
+        Range("B2").Select
+    ElseIf Len(Range("B2")) <> 9 Then
+        MsgBox ("Panjang NIM harus 9 digit. Panjang NIM yang anda masukkan : " & Len(Range("B2")))
+        Range("B2").Select
+        Application.SendKeys "{F2}" => UNTUK MELANJUTKAN MENGEDIT KOLOM TERSEBUT
+    End If
+    
+    For i = 1 To 100   => UNTUK MENGECEK JUMLAH BARIS YANG BELUM LENGKAP
+        If ThisWorkbook.Worksheets(2).Range("B2") = "" Then
+           ThisWorkbook.Worksheets(1).Range("D2") = i
+           ThisWorkbook.Worksheets(1).Range("B3").Select
+        End If
+    Exit For
+    Next i
+End Sub
+
+
+
+> Koding simpan untuk satu baris data
+    ThisWorkbook.Worksheets(2).Cells(2, 2) = ThisWorkbook.Worksheets(1).Cells(2, 2)
+    ThisWorkbook.Worksheets(2).Cells(2, 3) = ThisWorkbook.Worksheets(1).Cells(3, 2)
+    ThisWorkbook.Worksheets(2).Cells(2, 4) = ThisWorkbook.Worksheets(1).Cells(4, 2)
+
+> 
