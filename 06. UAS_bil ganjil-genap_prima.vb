@@ -40,3 +40,31 @@ Sub Button2_Prima()
         MsgBox ("Bilangan" & angka_prima & "bukanlah bilangan prima")
     End If
 End Sub
+
+
+    '' REVISI 03
+Sub Button1_Cek()
+    '' PENGECEKAN GANJIL-GENAP
+    Dim angka As Integer
+    angka = Range("C6")
+    
+    If angka Mod 2 = 1 Then
+        Range("C9") = ("Bilangan " & angka & " adalah bilangan ganjil")
+    ElseIf angka Mod 2 = 0 Then
+        Range("C9") = ("Bilangan " & angka & " adalah bilangan genap")
+    End If
+    
+    ''PENGECEKAN BILANGAN PRIMA
+    Dim angka_prima As Integer
+    angka_prima = Range("C6")
+    pembagi = 2
+    
+    If angka_prima Mod pembagi <> 1 And angka_prima Mod pembagi <> 0 Then
+        pembagi = pembagi + 1
+    ElseIf pembagi = angka_prima Then
+        Range("C10") = ("Dan bilangan tersebut adalah bilangan prima")
+    Else
+        Range("C10") = ("Dan bilangan tersebut bukanlah bilangan prima")
+    End If
+    
+End Sub
