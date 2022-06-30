@@ -190,3 +190,32 @@ Sub Button1_Cek()
     End If
 End Sub
 
+
+    ''REVISI 08 => SHARE KE KAWAN WKWKWK
+Sub Button1_Cek()
+    Dim angka As Integer
+    angka = Range("C3")
+    
+    If angka Mod 2 = 1 Then
+        Range("A7") = ("Angka " & angka & " adalah angka ganjil")
+    ElseIf angka Mod 2 = 0 Then
+        Range("A7") = ("Angka " & angka & " adalah angka genap")
+    End If
+    
+    
+    Dim divisors As Integer, number As Long, i As Long
+    divisors = 0
+    number = Range("C3")
+    
+    For i = 1 To number
+        If number Mod i = 0 Then
+        divisors = divisors + 1
+        End If
+    Next i
+    
+    If divisors = 2 Then
+        Range("A8") = "Dan angka tersebut adalah angka prima"
+    Else
+        Range("A8") = "Dan angka tersebut bukanlah angka prima"
+    End If
+End Sub
